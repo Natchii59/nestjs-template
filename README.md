@@ -2,6 +2,42 @@
 
 This repository is the beginning of a Nestjs project with a database that is initialized (in postgreSQL, editable later). As well as husky for git hooks, a github actions, and typeorm migrations.
 
+# Summary
+
+- [Installation](#installation)
+- [API](#api)
+- [Database](#database)
+  - [How change Database](#how-change-database)
+  - [Migrations](#migrations)
+- [Git Hooks](#git-hooks)
+- [Github Actions](#github-actions)
+- [Eslint / Prettier](#eslint--prettier)
+
+- [Maintenance](#maintenance)
+
+## Installation
+
+To install the template, you will need to clone it with git on your local machine.
+
+```
+git clone https://github.com/Natchii59/nestjs-template.git
+```
+
+Then you just have to install the dependencies with this command.
+After this, husky will also settle on its own.
+
+**NPM**
+
+```
+npm install
+```
+
+**YARN**
+
+```
+yarn
+```
+
 ## API
 
 The services and controllers are the same as those created when the nest project was initialized.
@@ -13,20 +49,24 @@ The database is integrated thanks to [Typeorm](https://typeorm.io). I created on
 
 You also have the source of the database in the [data-source.ts](/src/database/data-source.ts) file which takes about the same parameters as for the TypeormModule in the [app.module.ts](/src/app.module.ts). This is used for the Typeorm cli.
 
-### How change Database
+## How change Database
 
 To change the database, you must first uninstall the 'pg' dependency which is that of PostgreSQL.
 
 **NPM**
 
 ```
+
 npm uninstall pg
+
 ```
 
 **YARN**
 
 ```
+
 yarn remove pg
+
 ```
 
 Then you will need to install the dependency corresponding to your type of database (for example for mysql it will be 'mysql2').
@@ -34,13 +74,17 @@ Then you will need to install the dependency corresponding to your type of datab
 **NPM**
 
 ```
+
 npm install mysql2
+
 ```
 
 **YARN**
 
 ```
+
 yarn add mysql2
+
 ```
 
 Then in the file app.module.ts it will be necessary to modify the type of database in the [TypeormModule](/src/app.module.ts#L18).
@@ -58,7 +102,7 @@ You can also revert to the previous database state with the `migration:revert` s
 ## Git hooks
 
 I installed [husky](https://typicode.github.io/husky) for pre-commit which is very useful for running commands before committing.
-Here I installed [lint-stagged](https://github.com/okonet/lint-staged) to run commands only on files that are staged. I put the script I created from [eslint](https://eslint.org) which refuses the commit if at least 1 warning is detected.
+Here I installed [lint-staged](https://github.com/okonet/lint-staged) to run commands only on files that are staged. I put the script I created from [eslint](https://eslint.org) which refuses the commit if at least 1 warning is detected.
 
 ## Github Actions
 
