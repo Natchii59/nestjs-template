@@ -55,17 +55,13 @@ To change the database, you must first uninstall the 'pg' dependency which is th
 **NPM**
 
 ```
-
 npm uninstall pg
-
 ```
 
 **YARN**
 
 ```
-
 yarn remove pg
-
 ```
 
 Then you will need to install the dependency corresponding to your type of database (for example for mysql it will be 'mysql2').
@@ -73,17 +69,13 @@ Then you will need to install the dependency corresponding to your type of datab
 **NPM**
 
 ```
-
 npm install mysql2
-
 ```
 
 **YARN**
 
 ```
-
 yarn add mysql2
-
 ```
 
 Then in the file app.module.ts it will be necessary to modify the type of database in the [TypeormModule](/src/app.module.ts#L18).
