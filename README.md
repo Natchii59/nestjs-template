@@ -12,7 +12,6 @@ This repository is the beginning of a Nestjs project with a database that is ini
 - [Git Hooks](#git-hooks)
 - [Github Actions](#github-actions)
 - [Eslint / Prettier](#eslint--prettier)
-
 - [Maintenance](#maintenance)
 
 ## Installation
